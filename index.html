@@ -11,7 +11,20 @@
 </head>
 <body>
 
+<form>
 
+    <!-- Hidden Required Fields -->
+    <input type="hidden" name="project_name" value="Test progect">
+    <input type="hidden" name="admin_email" value="andrey940@gmail.com">
+    <input type="hidden" name="form_subject" value="Form Subject">
+    <!-- END Hidden Required Fields -->
+
+    <input type="text" name="name" placeholder="You name..." required><br>
+    <input type="text" name="email" placeholder="You E-mail..." required><br>
+    <input type="text" name="phone" placeholder="You phone..."><br>
+    <button type="submit">Send</button>
+
+</form>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="js/main.js"></script>
