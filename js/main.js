@@ -1,19 +1,21 @@
 $(document).ready(function() {
 
-    $("form").submit(function() {
-        var th = $(this);
-        $.ajax({
-            type: "POST",
-            url: "php/form.php",
-            data: th.serialize(),
-            success: function() {
-                alert("Thank you!");
-                setTimeout(function() {
-                    th.trigger("reset");
-                }, 1000);
-            }
+    if($('#form').length !=0 ) {
+        $('#form').submit(function () {
+            var content = $(this);
+            $.ajax({
+                type: "POST",
+                url: "php/form.php",
+                data: content.serialize(),
+                success: function (html) {
+                    $('.content').html(html);
+                    console.log("ajax success");
+                    setTimeout(function () {
+                        content.trigger("reset");
+                    }, 1000);
+                }
+            });
+            return false;
         });
-        return false;
-    });
-
+    }
 });
