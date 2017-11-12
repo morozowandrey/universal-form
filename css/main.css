@@ -1,0 +1,42 @@
+html {
+   min-height: 100%
+}
+body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+    background-color: darkcyan;
+    min-height:100%;
+}
+.form {
+    width: 160px;
+}
+.validation-massage {
+    background-color: white;
+}
+.content {
+    width: 600px;
+    background-color: white;
+}
+.output-box {
+    padding-left: 40px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    color: blue;
+    font-size: 16px;
+    border-bottom: 2px solid darkred;
+}
+.output-box:first-of-type {
+    padding-top: 15px;
+}
+.output-box:last-of-type {
+    margin-bottom: 0;
+    border-bottom: none;
+}

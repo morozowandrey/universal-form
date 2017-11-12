@@ -11,20 +11,14 @@
 </head>
 <body>
 
-<form id="form">
+<form class="form" id="form">
 
-    <!--&lt;!&ndash; Hidden Required Fields &ndash;&gt;-->
-    <!--<input type="hidden" name="project_name" value="Test progect">-->
-    <!--<input type="hidden" name="admin_email" value="andrey940@gmail.com">-->
-    <!--<input type="hidden" name="form_subject" value="Form Subject">-->
-    <!--&lt;!&ndash; END Hidden Required Fields &ndash;&gt;-->
-
-    <input type="text" name="name" placeholder="You name..." required><br>
-    <input type="text" name="email" placeholder="You E-mail..." required><br>
-    <input type="text" name="phone" placeholder="You phone..."><br>
+    <input type="text" name="name" id="input-name" placeholder="You name..." required><br>
+    <input type="text" name="email" id="input-email" placeholder="You E-mail..." required><br>
+    <input type="text" name="phone" id="input-phone" placeholder="You phone..."><br>
     <button type="submit">Send</button>
-    
-    <div class="content"></div>
+
+    <div class="validation-massage"></div>
 
 </form>
 

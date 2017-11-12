@@ -11,30 +11,30 @@
 </head>
 <body>
 
-<form>
-
-    <?php
-        include_once ("php/connection.php");
-
-        $result = mysqli_query($connection,"SELECT name, email, telephone FROM test_form WHERE id = '6' ");
-        mysqli_close($connection);
-
-        $data = mysqli_fetch_assoc($result);
-    ?>
-    
     <div class="content">
-        <div class="name">
-            <?php echo $data ['name']; ?>
-        </div>
-        <div class="email">
-            <?php echo $data ['email']; ?>
-        </div>
-        <div class="telephone">
-            <?php echo $data ['telephone']; ?>
-        </div>
-    </div>
+        <?php
+            include_once ("php/connection.php");
+            $result = mysqli_query($connection,"SELECT name, email, telephone FROM test_form");
+            header('Content-type: text\jsone; charset=utf-8');
+            mysqli_close($connection);
 
-</form>
+            while ($data = mysqli_fetch_assoc($result)){
+        ?>
+
+        <div class="output-box">
+            <div class="output-box__name">
+                <?php echo 'name: ', $data ['name']; ?>
+            </div>
+            <div class="output-box__email">
+                <?php echo 'email: ',$data ['email']; ?>
+            </div>
+            <div class="output-box__telephone">
+                <?php echo 'phone: ', $data ['telephone']; ?>
+            </div>
+        </div>
+
+        <?php }?>
+    </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="js/main.js"></script>
