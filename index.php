@@ -11,16 +11,24 @@
 </head>
 <body>
 
-<form class="form" id="form">
-
-    <input type="text" name="name" id="input-name" placeholder="You name..." required><br>
-    <input type="text" name="email" id="input-email" placeholder="You E-mail..." required><br>
-    <input type="text" name="phone" id="input-phone" placeholder="You phone..."><br>
-    <button type="submit">Send</button>
-
-    <div class="validation-massage"></div>
-
-</form>
+<div class="form-page flex-wrapper flex-wrapper_form-page">
+    <form class="form" id="form" action="php/form.php" novalidate>
+        <div class="form-field">
+            <label for="input-name" class="form-field__label">Your name</label>
+            <input type="text" name="name" class="form-field__input" id="input-name" required="true" placeholder="Enter name">
+        </div>
+        <div class="form-field">
+            <label for="input-email" class="form-field__label">Email</label>
+            <input type="email" name="email" class="form-field__input" id="input-email" placeholder="Enter email" required="true">
+        </div>
+        <div class="form-field">
+            <label for="input-phone" class="form-field__label">Phone</label>
+            <input type="tel" name="phone" class="form-field__input" id="input-phone" placeholder="Phone" required="true">
+        </div>
+        <button type="submit" class="form-button">Submit</button>
+    </form>
+    <div class="validation-massage">Пожалуйста заполните форму...</div>
+</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="js/main.js"></script>

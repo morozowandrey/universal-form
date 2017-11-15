@@ -10,12 +10,11 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-
+<div class="flex-wrapper">
     <div class="content">
         <?php
             include_once ("php/connection.php");
             $result = mysqli_query($connection,"SELECT name, email, telephone FROM test_form");
-            header('Content-type: text\jsone; charset=utf-8');
             mysqli_close($connection);
 
             while ($data = mysqli_fetch_assoc($result)){
@@ -35,7 +34,7 @@
 
         <?php }?>
     </div>
-
+</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="js/main.js"></script>
 </body>
